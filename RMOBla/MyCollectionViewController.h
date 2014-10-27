@@ -9,6 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "RFQuiltLayout.h"
 
-@interface MyCollectionViewController : UIViewController
+@interface MyCollectionViewController : UIViewController <RFQuiltLayoutDelegate>
 
 @end

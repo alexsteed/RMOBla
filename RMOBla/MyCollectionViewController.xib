@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MyCollectionViewController">
             <connections>
+                <outlet property="collectionView" destination="dOp-F2-E5j" id="HFD-Ve-dQ0"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,16 +15,20 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-F2-E5j" customClass="RFQuiltLayout">
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="dOp-F2-E5j">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HXD-h0-uPa">
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="HXD-h0-uPa" customClass="RFQuiltLayout">
                         <size key="itemSize" width="50" height="50"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        <connections>
+                            <outlet property="delegate" destination="-1" id="oAm-kE-NVm"/>
+                        </connections>
                     </collectionViewFlowLayout>
                     <connections>
-                        <outlet property="delegate" destination="-1" id="peh-8Z-NYK"/>
+                        <outlet property="dataSource" destination="-1" id="pdW-x3-wze"/>
+                        <outlet property="delegate" destination="-1" id="7RC-46-fBC"/>
                     </connections>
                 </collectionView>
             </subviews>
